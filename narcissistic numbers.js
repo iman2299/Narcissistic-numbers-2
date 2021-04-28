@@ -1,15 +1,22 @@
 /*write a small web app that:
     - asks the user to enter a number of any number of digits (strings and Cancel should be converted to 0).
     - display whether this number is narcissistic or not.*/
-    const value = (prompt("ENTER A NUMBER between 100 to 999 ")) || 0;
-
-    if ( value[0] ** 3 + value[1] ** 3 + value[2] ** 3  == value)
-     
-    {
-        document.getElementById("test").innerHTML = "Number  " + value+ "  is Narcissistic ";
+    let number = prompt( '') ;
+    if (isNaN(number)){
+        number = '0';
     }
+    let total = 0;
+
+   for (let i = 0 ; i < number .length; i++){
+       total += parseInt(number[i]) ** number. length;
+   }
+
+    if (total === parseInt(number)) {
+
+       alert('Narcissistic')  ;
+    } 
       else 
     {
-        document.getElementById("test").innerHTML = "Number  " + value+ "  isn't Narcisisstic";
+      alert ('not Narcisisstic');
     }
  
